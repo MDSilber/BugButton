@@ -111,26 +111,25 @@
 
 - (NSData *)getScreenshot
 {
-    // Define the dimensions of the screenshot you want to take (the entire screen in this case)
     CGSize size =  [[UIScreen mainScreen] bounds].size;
     
-    // Create the screenshot
     UIGraphicsBeginImageContext(size);
-    // Put everything in the current view into the screenshot
     [[[[[UIApplication sharedApplication] delegate] window] layer] renderInContext:UIGraphicsGetCurrentContext()];
-    // Save the current image context info into a UIImage
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
+
     return UIImageJPEGRepresentation(newImage, 0.5);
 }
 
 -(NSString *)bugReportString
 {
     NSString *baseString = @"Thanks for filing a bug!\n\nSummary:\n\nSteps to reproduce:\n\nExpected results:\n\nActual results:\n\n";
+
     UIDevice *device = [UIDevice currentDevice];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"MM/dd/yyyy hh:mm:ss aa"];
+    [dateFormatter setDateFormat:@"MM/dd/yyyy hh:mm:ss aa"];    
     NSString *deviceInfo = [NSString stringWithFormat:@"%@ %@\n%@", device.systemName, device.systemVersion, [dateFormatter stringFromDate:[NSDate date]]];
+    
     return [NSString stringWithFormat:@"%@\n%@", baseString, deviceInfo];
 }
 

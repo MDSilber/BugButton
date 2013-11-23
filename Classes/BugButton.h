@@ -15,9 +15,13 @@
 @end
 
 @interface BugButton : UIButton
+
 @property (nonatomic, weak) id<BugButtonDelegate> delegate;
+//These are used to set the bounds where the bug button can be dragged
 @property (nonatomic) CGFloat minX, maxX, minY, maxY;
+
 +(instancetype)bugButton;
 -(NSData *)getScreenshot;
 -(NSString *)bugReportString;
+
 @end
