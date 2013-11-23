@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class BugButton;
+
 @protocol BugButtonDelegate
-- (void)reportBug:(id)sender;
+- (void)reportBug:(BugButton *)sender;
 @end
 
 @interface BugButton : UIButton
@@ -17,4 +19,5 @@
 @property (nonatomic) CGFloat minX, maxX, minY, maxY;
 +(instancetype)bugButton;
 -(NSData *)getScreenshot;
+-(NSString *)bugReportString;
 @end

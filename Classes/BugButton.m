@@ -124,4 +124,14 @@
     return UIImageJPEGRepresentation(newImage, 0.5);
 }
 
+-(NSString *)bugReportString
+{
+    NSString *baseString = @"Thanks for filing a bug!\n\nSummary:\n\nSteps to reproduce:\n\nExpected results:\n\nActual results:\n\n";
+    UIDevice *device = [UIDevice currentDevice];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"MM/dd/yyyy hh:mm:ss aa"];
+    NSString *deviceInfo = [NSString stringWithFormat:@"%@ %@\n%@", device.systemName, device.systemVersion, [dateFormatter stringFromDate:[NSDate date]]];
+    return [NSString stringWithFormat:@"%@\n%@", baseString, deviceInfo];
+}
+
 @end
