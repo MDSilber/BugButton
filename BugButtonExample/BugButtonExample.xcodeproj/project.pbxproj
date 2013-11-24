@@ -14,11 +14,6 @@
 		28DC3C0C18414E1700D93D76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC3C0B18414E1700D93D76 /* main.m */; };
 		28DC3C1018414E1800D93D76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC3C0F18414E1800D93D76 /* AppDelegate.m */; };
 		28DC3C1218414E1800D93D76 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28DC3C1118414E1800D93D76 /* Images.xcassets */; };
-		28DC3C1918414E1800D93D76 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28DC3C1818414E1800D93D76 /* XCTest.framework */; };
-		28DC3C1A18414E1800D93D76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28DC3BFF18414E1700D93D76 /* Foundation.framework */; };
-		28DC3C1B18414E1800D93D76 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28DC3C0318414E1700D93D76 /* UIKit.framework */; };
-		28DC3C2318414E1800D93D76 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 28DC3C2118414E1800D93D76 /* InfoPlist.strings */; };
-		28DC3C2518414E1800D93D76 /* BugButtonExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC3C2418414E1800D93D76 /* BugButtonExampleTests.m */; };
 		28DC3C3018414E2900D93D76 /* BugButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC3C2F18414E2900D93D76 /* BugButton.m */; };
 		28DC3C3518414E2E00D93D76 /* Bug.png in Resources */ = {isa = PBXBuildFile; fileRef = 28DC3C3118414E2E00D93D76 /* Bug.png */; };
 		28DC3C3618414E2E00D93D76 /* Bug@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28DC3C3218414E2E00D93D76 /* Bug@2x.png */; };
@@ -28,16 +23,6 @@
 		28DC3C4318414FCF00D93D76 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DC3C4118414FCF00D93D76 /* ViewController.m */; };
 		28DC3C4418414FCF00D93D76 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28DC3C4218414FCF00D93D76 /* ViewController.xib */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		28DC3C1C18414E1800D93D76 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 28DC3BF418414E1700D93D76 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 28DC3BFB18414E1700D93D76;
-			remoteInfo = BugButtonExample;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		28DC3BFC18414E1700D93D76 /* BugButtonExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BugButtonExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,11 +36,7 @@
 		28DC3C0E18414E1800D93D76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		28DC3C0F18414E1800D93D76 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		28DC3C1118414E1800D93D76 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		28DC3C1718414E1800D93D76 /* BugButtonExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BugButtonExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28DC3C1818414E1800D93D76 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		28DC3C2018414E1800D93D76 /* BugButtonExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BugButtonExampleTests-Info.plist"; sourceTree = "<group>"; };
-		28DC3C2218414E1800D93D76 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		28DC3C2418414E1800D93D76 /* BugButtonExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BugButtonExampleTests.m; sourceTree = "<group>"; };
 		28DC3C2E18414E2900D93D76 /* BugButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BugButton.h; path = ../../Classes/BugButton.h; sourceTree = "<group>"; };
 		28DC3C2F18414E2900D93D76 /* BugButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BugButton.m; path = ../../Classes/BugButton.m; sourceTree = "<group>"; };
 		28DC3C3118414E2E00D93D76 /* Bug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bug.png; path = ../../Resources/Bug.png; sourceTree = "<group>"; };
@@ -80,16 +61,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		28DC3C1418414E1800D93D76 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				28DC3C1918414E1800D93D76 /* XCTest.framework in Frameworks */,
-				28DC3C1B18414E1800D93D76 /* UIKit.framework in Frameworks */,
-				28DC3C1A18414E1800D93D76 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -97,7 +68,6 @@
 			isa = PBXGroup;
 			children = (
 				28DC3C0518414E1700D93D76 /* BugButtonExample */,
-				28DC3C1E18414E1800D93D76 /* BugButtonExampleTests */,
 				28DC3BFE18414E1700D93D76 /* Frameworks */,
 				28DC3BFD18414E1700D93D76 /* Products */,
 			);
@@ -107,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				28DC3BFC18414E1700D93D76 /* BugButtonExample.app */,
-				28DC3C1718414E1800D93D76 /* BugButtonExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,24 +119,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		28DC3C1E18414E1800D93D76 /* BugButtonExampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				28DC3C2418414E1800D93D76 /* BugButtonExampleTests.m */,
-				28DC3C1F18414E1800D93D76 /* Supporting Files */,
-			);
-			path = BugButtonExampleTests;
-			sourceTree = "<group>";
-		};
-		28DC3C1F18414E1800D93D76 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				28DC3C2018414E1800D93D76 /* BugButtonExampleTests-Info.plist */,
-				28DC3C2118414E1800D93D76 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		28DC3C3F18414F7500D93D76 /* BugButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,24 +152,6 @@
 			productReference = 28DC3BFC18414E1700D93D76 /* BugButtonExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		28DC3C1618414E1800D93D76 /* BugButtonExampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 28DC3C2B18414E1800D93D76 /* Build configuration list for PBXNativeTarget "BugButtonExampleTests" */;
-			buildPhases = (
-				28DC3C1318414E1800D93D76 /* Sources */,
-				28DC3C1418414E1800D93D76 /* Frameworks */,
-				28DC3C1518414E1800D93D76 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				28DC3C1D18414E1800D93D76 /* PBXTargetDependency */,
-			);
-			name = BugButtonExampleTests;
-			productName = BugButtonExampleTests;
-			productReference = 28DC3C1718414E1800D93D76 /* BugButtonExampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -227,11 +160,6 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = MasonSilber;
-				TargetAttributes = {
-					28DC3C1618414E1800D93D76 = {
-						TestTargetID = 28DC3BFB18414E1700D93D76;
-					};
-				};
 			};
 			buildConfigurationList = 28DC3BF718414E1700D93D76 /* Build configuration list for PBXProject "BugButtonExample" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -246,7 +174,6 @@
 			projectRoot = "";
 			targets = (
 				28DC3BFB18414E1700D93D76 /* BugButtonExample */,
-				28DC3C1618414E1800D93D76 /* BugButtonExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -266,14 +193,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		28DC3C1518414E1800D93D76 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				28DC3C2318414E1800D93D76 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -288,37 +207,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		28DC3C1318414E1800D93D76 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				28DC3C2518414E1800D93D76 /* BugButtonExampleTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		28DC3C1D18414E1800D93D76 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 28DC3BFB18414E1700D93D76 /* BugButtonExample */;
-			targetProxy = 28DC3C1C18414E1800D93D76 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		28DC3C0818414E1700D93D76 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				28DC3C0918414E1700D93D76 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		28DC3C2118414E1800D93D76 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				28DC3C2218414E1800D93D76 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -424,48 +319,6 @@
 			};
 			name = Release;
 		};
-		28DC3C2C18414E1800D93D76 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BugButtonExample.app/BugButtonExample";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BugButtonExample/BugButtonExample-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "BugButtonExampleTests/BugButtonExampleTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		28DC3C2D18414E1800D93D76 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BugButtonExample.app/BugButtonExample";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BugButtonExample/BugButtonExample-Prefix.pch";
-				INFOPLIST_FILE = "BugButtonExampleTests/BugButtonExampleTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -483,14 +336,6 @@
 			buildConfigurations = (
 				28DC3C2918414E1800D93D76 /* Debug */,
 				28DC3C2A18414E1800D93D76 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		28DC3C2B18414E1800D93D76 /* Build configuration list for PBXNativeTarget "BugButtonExampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				28DC3C2C18414E1800D93D76 /* Debug */,
-				28DC3C2D18414E1800D93D76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
