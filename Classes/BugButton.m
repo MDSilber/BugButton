@@ -26,7 +26,7 @@
     bugReportButton.minY = 74;
     bugReportButton.maxY = 436;
     
-    [bugReportButton setFrame:CGRectMake(240, 400, bugImage.size.width, bugImage.size.height)];
+    bugReportButton.frame = CGRectMake(240, 400, bugImage.size.width, bugImage.size.height);
     [bugReportButton setBackgroundImage:bugImage forState:UIControlStateNormal];
     [bugReportButton setBackgroundImage:bugHighlightedImage forState:UIControlStateHighlighted];
     
