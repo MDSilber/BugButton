@@ -25,7 +25,7 @@ Features
 
 Example usage
 --------
-In this example (from the attached example project), tapping the bug button will bring up an email form that the user can fill out. It also attaches a screenshot of the current state of the app, as well as the device model and OS version for diagnostics.
+In this example (from the included example project), tapping the bug button will bring up an email form that the user can fill out. It also attaches a screenshot of the current state of the app, as well as the device model, OS version, and app version for diagnostics.
 
 AppDelegate.h:
 ```
