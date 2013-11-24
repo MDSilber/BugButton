@@ -14,7 +14,7 @@
 
 @implementation BugButton
 
-+(instancetype)bugButton
++ (instancetype)bugButton
 {
     UIImage *bugImage = [UIImage imageNamed:@"Bug"];
     UIImage *bugHighlightedImage = [UIImage imageNamed:@"BugSelected"];
@@ -39,13 +39,13 @@
     return bugReportButton;
 }
 
--(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [super touchesMoved:touches withEvent:event];
     self.isBeingDragged = YES;
 }
 
--(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     if (self.isBeingDragged) {
         self.isBeingDragged = NO;
@@ -55,7 +55,7 @@
     }
 }
 
--(void)_buttonTouched:(id)sender
+- (void)_buttonTouched:(id)sender
 {
     UIButton *button = (UIButton *)sender;
     UIImage *bugButtonImage = [UIImage imageNamed:@"BugSelected"];
@@ -65,7 +65,7 @@
     [button setBackgroundImage:bugButtonImage forState:UIControlStateNormal];
 }
 
--(void)_buttonTouchEnded:(id)sender
+- (void)_buttonTouchEnded:(id)sender
 {
     UIButton *button = (UIButton *)sender;
     UIImage *bugButtonImage = [UIImage imageNamed:@"Bug"];
@@ -75,7 +75,7 @@
     [button setBackgroundImage:bugButtonImage forState:UIControlStateNormal];
 }
 
--(void)_wasDragged:(UIButton *)button withEvent:(UIEvent *)event
+- (void)_wasDragged:(UIButton *)button withEvent:(UIEvent *)event
 {
     UITouch *touch = [[event touchesForView:button] anyObject];
     BugButton *bugButton = (BugButton *)button;
@@ -127,7 +127,7 @@
     return UIImageJPEGRepresentation(newImage, 0.5);
 }
 
--(NSString *)bugReportString
+- (NSString *)bugReportString
 {
     NSString *baseString = @"Thanks for filing a bug!\n\nSummary:\n\nSteps to reproduce:\n\nExpected results:\n\nActual results:\n\n";
 

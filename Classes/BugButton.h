@@ -20,8 +20,8 @@
 //These are used to set the bounds where the bug button can be dragged
 @property (nonatomic) CGFloat minX, maxX, minY, maxY;
 
-+(instancetype)bugButton;
--(NSData *)getScreenshot;
--(NSString *)bugReportString;
++ (instancetype)bugButton;
+- (NSData *)getScreenshot;
+- (NSString *)bugReportString;
 
 @end
