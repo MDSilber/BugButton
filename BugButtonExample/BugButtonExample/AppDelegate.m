@@ -39,9 +39,9 @@
         return;
     }
     MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
-    [mailViewController setMailComposeDelegate:self];
-    [mailViewController setToRecipients:@[@"bug-reports@myapp.com"]];
-    [mailViewController setSubject:@"Bug Report"];
+    mailViewController.mailComposeDelegate = self;
+    mailViewController.toRecipients = @[@"bug-reports@myapp.com"];
+    mailViewController.subject = @"Bug Report";
     [mailViewController setMessageBody:[sender bugReportString] isHTML:NO];
     [mailViewController addAttachmentData:[sender getScreenshot] mimeType:@"image/jpeg" fileName:@"screenshot"];
     [self.window.rootViewController presentViewController:mailViewController animated:YES completion:nil];
