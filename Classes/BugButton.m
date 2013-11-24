@@ -18,18 +18,24 @@
 {
     UIImage *bugImage = [UIImage imageNamed:@"Bug"];
     UIImage *bugHighlightedImage = [UIImage imageNamed:@"BugSelected"];
+    
     BugButton *bugReportButton = [super buttonWithType:UIButtonTypeCustom];
+    //Default bounds of button's center
     bugReportButton.minX = 40;
     bugReportButton.maxX = 290;
     bugReportButton.minY = 74;
     bugReportButton.maxY = 436;
+    
     [bugReportButton setFrame:CGRectMake(240, 400, bugImage.size.width, bugImage.size.height)];
     [bugReportButton setBackgroundImage:bugImage forState:UIControlStateNormal];
     [bugReportButton setBackgroundImage:bugHighlightedImage forState:UIControlStateHighlighted];
-    [bugReportButton addTarget:bugReportButton action:@selector(wasDragged:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [bugReportButton addTarget:bugReportButton action:@selector(reportBug:) forControlEvents:UIControlEventTouchUpInside];
-    [bugReportButton addTarget:bugReportButton action:@selector(buttonTouched:) forControlEvents:UIControlEventTouchDown];
-    [bugReportButton addTarget:bugReportButton action:@selector(buttonTouchEnded:) forControlEvents:UIControlEventTouchCancel];
+    
+    //Add selectors
+    [bugReportButton addTarget:bugReportButton action:@selector(_wasDragged:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [bugReportButton addTarget:bugReportButton action:@selector(_reportBug:) forControlEvents:UIControlEventTouchUpInside];
+    [bugReportButton addTarget:bugReportButton action:@selector(_buttonTouched:) forControlEvents:UIControlEventTouchDown];
+    [bugReportButton addTarget:bugReportButton action:@selector(_buttonTouchEnded:) forControlEvents:UIControlEventTouchCancel];
+    
     return bugReportButton;
 }
 
@@ -49,7 +55,7 @@
     }
 }
 
--(void)buttonTouched:(id)sender
+-(void)_buttonTouched:(id)sender
 {
     UIButton *button = (UIButton *)sender;
     UIImage *bugButtonImage = [UIImage imageNamed:@"BugSelected"];
@@ -59,7 +65,7 @@
     [button setBackgroundImage:bugButtonImage forState:UIControlStateNormal];
 }
 
--(void)buttonTouchEnded:(id)sender
+-(void)_buttonTouchEnded:(id)sender
 {
     UIButton *button = (UIButton *)sender;
     UIImage *bugButtonImage = [UIImage imageNamed:@"Bug"];
@@ -69,7 +75,7 @@
     [button setBackgroundImage:bugButtonImage forState:UIControlStateNormal];
 }
 
--(void)wasDragged:(UIButton *)button withEvent:(UIEvent *)event
+-(void)_wasDragged:(UIButton *)button withEvent:(UIEvent *)event
 {
     UITouch *touch = [[event touchesForView:button] anyObject];
     BugButton *bugButton = (BugButton *)button;
@@ -99,7 +105,7 @@
 	button.center = CGPointMake(newLocationX, newLocationY);
 }
 
-- (void)reportBug:(BugButton *)sender
+- (void)_reportBug:(BugButton *)sender
 {
     UIImage *bugButtonImage = [UIImage imageNamed:@"Bug"];
     CGRect buttonFrame = sender.frame;
