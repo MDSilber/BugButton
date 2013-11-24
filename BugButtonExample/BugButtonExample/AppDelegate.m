@@ -9,9 +9,11 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 
-@implementation AppDelegate {
-    BugButton *bugButton;
-}
+@interface AppDelegate ()
+@property (nonatomic) BugButton *bugButton;
+@end
+
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -21,9 +23,9 @@
     ViewController *viewController = [[ViewController alloc] initWithNibName:nil bundle:nil];
     self.window.rootViewController = viewController;
     [self.window makeKeyAndVisible];
-    bugButton = [BugButton bugButton];
-    bugButton.delegate = self;
-    [self.window addSubview:bugButton];
+    self.bugButton = [BugButton bugButton];
+    self.bugButton.delegate = self;
+    [self.window addSubview:self.bugButton];
     return YES;
 }
 
@@ -51,7 +53,7 @@
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
 {
     [self.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
-    [self.window addSubview:bugButton];
+    [self.window addSubview:self.bugButton];
 }
 
 @end
