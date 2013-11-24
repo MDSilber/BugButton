@@ -2,7 +2,7 @@
 //  BugButton.h
 //  Thirstie
 //
-//  Created by Mason Silber on 9/21/13.
+//  Created by Mason Silber on 11/23/13.
 //  Copyright (c) 2013 Digital-Liquor-Delivery. All rights reserved.
 //
 
