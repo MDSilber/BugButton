@@ -134,9 +134,14 @@
     UIDevice *device = [UIDevice currentDevice];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"MM/dd/yyyy hh:mm:ss aa"];    
-    NSString *deviceInfo = [NSString stringWithFormat:@"%@ %@\n%@", device.systemName, device.systemVersion, [dateFormatter stringFromDate:[NSDate date]]];
+    NSString *deviceInfo = [NSString stringWithFormat:@"%@ %@\n%@\n%@", device.systemName, device.systemVersion, [self _appVersionNumber],[dateFormatter stringFromDate:[NSDate date]]];
     
     return [NSString stringWithFormat:@"%@\n%@", baseString, deviceInfo];
+}
+
+- (NSString *)_appVersionNumber
+{
+    return [NSString stringWithFormat:@"Version: %@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]];
 }
 
 @end
