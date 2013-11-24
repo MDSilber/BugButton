@@ -29,7 +29,6 @@
 
 - (void)reportBug:(BugButton *)sender
 {
-    NSLog(@"BUG REPORT");
     if (![MFMailComposeViewController canSendMail]) {
         UIAlertView *cannotEmailAlert = [[UIAlertView alloc] initWithTitle:@"Error"
                                                                    message:@"This device is not set up to send email."
