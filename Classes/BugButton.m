@@ -61,7 +61,7 @@
     UIImage *bugButtonImage = [UIImage imageNamed:@"BugSelected"];
     CGRect buttonFrame = button.frame;
     buttonFrame.size = bugButtonImage.size;
-    [button setFrame:buttonFrame];
+    button.frame = buttonFrame;
     [button setBackgroundImage:bugButtonImage forState:UIControlStateNormal];
 }
 
@@ -71,7 +71,7 @@
     UIImage *bugButtonImage = [UIImage imageNamed:@"Bug"];
     CGRect buttonFrame = button.frame;
     buttonFrame.size = bugButtonImage.size;
-    [button setFrame:buttonFrame];
+    button.frame = buttonFrame;
     [button setBackgroundImage:bugButtonImage forState:UIControlStateNormal];
 }
 
@@ -110,7 +110,7 @@
     UIImage *bugButtonImage = [UIImage imageNamed:@"Bug"];
     CGRect buttonFrame = sender.frame;
     buttonFrame.size = bugButtonImage.size;
-    [sender setFrame:buttonFrame];
+    sender.frame = buttonFrame;
     [sender setBackgroundImage:bugButtonImage forState:UIControlStateNormal];
     [self.delegate reportBug:self];
 }
@@ -120,7 +120,7 @@
     CGSize size =  [[UIScreen mainScreen] bounds].size;
     
     UIGraphicsBeginImageContext(size);
-    [[[[[UIApplication sharedApplication] delegate] window] layer] renderInContext:UIGraphicsGetCurrentContext()];
+    [[UIApplication sharedApplication].delegate.window.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 
@@ -133,7 +133,7 @@
 
     UIDevice *device = [UIDevice currentDevice];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"MM/dd/yyyy hh:mm:ss aa"];    
+    dateFormatter.dateFormat = @"MM/dd/yyyy hh:mm:ss aa";
     NSString *deviceInfo = [NSString stringWithFormat:@"%@ %@\n%@\n%@", device.systemName, device.systemVersion, [self _appVersionNumber],[dateFormatter stringFromDate:[NSDate date]]];
     
     return [NSString stringWithFormat:@"%@\n%@", baseString, deviceInfo];
@@ -141,7 +141,7 @@
 
 - (NSString *)_appVersionNumber
 {
-    return [NSString stringWithFormat:@"Version: %@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]];
+    return [NSString stringWithFormat:@"Version: %@", [[NSBundle mainBundle].infoDictionary objectForKey:@"CFBundleShortVersionString"]];
 }
 
 @end
